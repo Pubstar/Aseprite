@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://cyixjg2n4a5q2"]
+
+[ext_resource type="Script" path="res://scripts/shield_guy.gd" id="1_2po7n"]
+[ext_resource type="Texture2D" uid="uid://8g41yfhg0002" path="res://spritesheets/shield_guy3.png" id="1_vycoa"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yual5"]
+atlas = ExtResource("1_vycoa")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5w30u"]
+atlas = ExtResource("1_vycoa")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gr585"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yual5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5w30u")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_2po7n")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_gr585")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.470819
