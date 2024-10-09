@@ -35,5 +35,5 @@ func _process(delta):
 	# Flip sprite
 	if direction < 0:
 		animated_sprite_2d.flip_h = true
-	else:
+	elif direction > 0:
 		animated_sprite_2d.flip_h = false

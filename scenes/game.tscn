@@ -1,8 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cwyil6me2ehtb"]
+[gd_scene load_steps=9 format=3 uid="uid://cwyil6me2ehtb"]
 
 [ext_resource type="PackedScene" uid="uid://dlanm8x6dn5f" path="res://scenes/player.tscn" id="2_8n1hq"]
 [ext_resource type="Texture2D" uid="uid://bsrkbjoyf0xyh" path="res://spritesheets/grass_platform.png" id="3_0mpbr"]
 [ext_resource type="PackedScene" uid="uid://cyixjg2n4a5q2" path="res://scenes/shield_guy.tscn" id="3_3nt5c"]
+[ext_resource type="PackedScene" uid="uid://bvvykadsv3r6u" path="res://scenes/gun_guy.tscn" id="4_jm4wg"]
+[ext_resource type="Texture2D" uid="uid://bkj0pyxqbrpan" path="res://spritesheets/tree.png" id="5_2c6s7"]
+[ext_resource type="PackedScene" uid="uid://dhhoc13hf2n8e" path="res://scenes/slime.tscn" id="6_7hs2r"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f4706"]
 texture = ExtResource("3_0mpbr")
@@ -24,6 +27,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_f4706")
 
 [node name="Game" type="Node2D"]
+position = Vector2(3, 1)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_0iju1")
@@ -38,3 +42,45 @@ zoom = Vector2(5, 5)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_3nt5c")]
 position = Vector2(63, 2)
+
+[node name="GunGuy" parent="." instance=ExtResource("4_jm4wg")]
+position = Vector2(3, -6)
+
+[node name="Tree" type="Sprite2D" parent="."]
+show_behind_parent = true
+z_index = -4096
+position = Vector2(-139, 2)
+texture = ExtResource("5_2c6s7")
+
+[node name="Tree2" type="Sprite2D" parent="."]
+show_behind_parent = true
+z_index = -4096
+position = Vector2(-125, 2)
+texture = ExtResource("5_2c6s7")
+
+[node name="Tree3" type="Sprite2D" parent="."]
+show_behind_parent = true
+z_index = -4096
+position = Vector2(-110, 2)
+texture = ExtResource("5_2c6s7")
+
+[node name="Tree4" type="Sprite2D" parent="."]
+show_behind_parent = true
+z_index = -4096
+position = Vector2(-83, 1)
+texture = ExtResource("5_2c6s7")
+
+[node name="Tree5" type="Sprite2D" parent="."]
+show_behind_parent = true
+z_index = -4096
+position = Vector2(33, 1)
+texture = ExtResource("5_2c6s7")
+
+[node name="Tree6" type="Sprite2D" parent="."]
+show_behind_parent = true
+z_index = -4096
+position = Vector2(93, 1)
+texture = ExtResource("5_2c6s7")
+
+[node name="Slime" parent="." instance=ExtResource("6_7hs2r")]
+position = Vector2(-25, 2)
