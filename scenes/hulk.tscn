@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=3 uid="uid://bnapou7yt555y"]
+
+[ext_resource type="Texture2D" uid="uid://cgwf1boqg0x1y" path="res://spritesheets/hulk_smash.png" id="1_1fgiq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aauqj"]
+atlas = ExtResource("1_1fgiq")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lfa6o"]
+atlas = ExtResource("1_1fgiq")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3fk27"]
+atlas = ExtResource("1_1fgiq")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_umdcu"]
+atlas = ExtResource("1_1fgiq")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p3vcf"]
+atlas = ExtResource("1_1fgiq")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ya1e8"]
+atlas = ExtResource("1_1fgiq")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x4k01"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aauqj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lfa6o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3fk27")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_umdcu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p3vcf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ya1e8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="Hulk" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_x4k01")
+autoplay = "default"
